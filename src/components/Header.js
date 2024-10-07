@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import App_Logo from "../assets/app_logo.webp";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
@@ -10,7 +10,6 @@ import { toggleGptSearchView } from "../utils/gptSLice";
 import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
-  // const [isGptSearch, setIsGptSearch] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
